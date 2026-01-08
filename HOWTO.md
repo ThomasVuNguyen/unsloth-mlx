@@ -4,14 +4,16 @@ This quick guide shows how to execute the bundled sanity-test script (`examples/
 
 ## 1. Install Dependencies
 
-Use the provided requirements and install the library in editable mode so `unsloth_mlx` can be imported:
+Use the provided requirements inside a project-local virtual environment so dependencies stay isolated:
 
 ```bash
-python3 -m pip install -r requirements.txt
-python3 -m pip install -e .
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m pip install -e .
 ```
 
-If Python warns about scripts not being on your `PATH`, add `/Library/Frameworks/Python.framework/Versions/3.11/bin` (or the equivalent for your installation) so tools such as `mlx_lm` are accessible.
+If Python warns about scripts not being on your `PATH`, add `/Library/Frameworks/Python.framework/Versions/3.11/bin` (or the equivalent for your installation) so tools such as `mlx_lm` are accessible. Remember to re-run `source .venv/bin/activate` in each new shell before training.
 
 ## 2. Run the Sample Training Script
 
