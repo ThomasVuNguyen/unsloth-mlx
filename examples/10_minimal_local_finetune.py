@@ -21,7 +21,7 @@ def format_sample(example, tokenizer):
 
 
 def main():
-    model_name = "unsloth/SmolLM2-135M"
+    model_name = "unsloth/SmolLM2-1.7B"
     dataset = load_dataset("json", data_files="sample_train.jsonl", split="train")
 
     model, tokenizer = FastLanguageModel.from_pretrained(
